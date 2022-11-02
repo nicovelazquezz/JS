@@ -9,7 +9,6 @@ const productos =  [
 
 let categoriaProducto=prompt('Elegí el tipo del producto que querés comprar: \n1 - Celular \n2 - Notebook');
 
-
 switch (categoriaProducto) {
     case "1":
         categoria = productos.filter(producto => producto.origen === "celular");
@@ -32,7 +31,7 @@ switch (categoriaProducto) {
     case "2":        
         categoria = productos.filter(producto => producto.origen === "notebook");
         categoria.forEach (productos => console.log(`El producto ${productos.nombre} tiene un precio de $${productos.precio}`));        
-        itemSelect=prompt(`Elegí un producto para calcular el IVA: \n1 - ${categoria[0].nombre} \n2 - ${categoria[1].nombre} \n3 - ${categoria[2].nombre}`);
+        itemSelect=prompt(`Elegí un producto para calcular el IVA: \n1 - ${categoria[0].nombre} - $${categoria[0].precio} \n2 - ${categoria[1].nombre} - $${categoria[1].precio} \n3 - ${categoria[2].nombre} - $${categoria[2].precio}`);        
         switch (itemSelect) {
             case "1":
                 alert("El precio con iva es $" + categoria[0].precio*1.21);                
