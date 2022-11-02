@@ -7,6 +7,11 @@ const productos =  [
     {nombre:'Notebook Gamer Asus TUF FX516', precio:2500, origen: "notebook"}
 ]
 
+let nombre=prompt('Ingresá tu nombre');
+function saludar(nombre){
+    alert(`Hola ${nombre}. Bienvenido a VaitStore`)};
+saludar(nombre);
+
 let categoriaProducto=prompt('Elegí el tipo del producto que querés comprar: \n1 - Celular \n2 - Notebook');
 
 switch (categoriaProducto) {
